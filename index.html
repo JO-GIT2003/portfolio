@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+   }
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+
+#menuBtn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+#home h1 span {
+    color: yellow;
+}
+#home{
+    height: 450px;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+    
+
+}
+.btn {
+    display: inline-block;
+    background-color: green;
+    color:white;
+    padding: 10px 20px;
+     margin-top: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+#about, #skills, #projects, #contact {
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+    margin-top: 50px;
+}
+#about h2{
+   
+    font-size: 40px;
+    
+}
+#about p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.skill-box {
+    background: white;
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 450px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    #menuBtn {
+        display: block;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<header>
+        <p class="logo">Jothika</p>
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+
+    </header>
+
+   
+    <section id="home">
+        <h1>Hi, I'm <span>M. Jothika</span></h1>
+        <h2>Full Stack  Developer</h2>
+        <p>Passionate about creating clean, responsive and modern web interfaces.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+   
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Jothika. I completed my B.Sc Microbiology and later developed a
+             strong interest in web development. I have finished my Full Stack Development course,
+              where I gained hands-on experience in HTML, CSS, JavaScript, Python and Django.
+I enjoy creating responsive, modern and clean UI designs. I love learning new concepts and improving
+ myself through real-time projects.
+        </p>
+    </section>
+
+  
+    <section id="skills" >
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <span>HTML</span>
+        </div>
+        <div class="skill-box">
+            <span>CSS</span>
+        </div>
+        <div class="skill-box">
+            <span>JavaScript</span>
+        </div>
+         <div class="skill-box">
+            <span>Angular</span>
+        </div>
+        <div class="skill-box">
+            <span>Python</span>
+        </div>
+        <div class="skill-box">
+            <span>Django</span>
+        </div>
+    </section>
+
+   
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Calculator App</h3>
+            <p>Basic JavaScript calculator with responsive UI.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Responsive Cinema Ticket Booking-Website</h3>
+            <p>Developed a fully responsive  using  HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Customer Relationship Management</h3>
+            <p>Developed a CRM  project Using Angular</p>
+        </div>
+
+    </section>
+
+   
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <strong>jothikaka93@gmail.com</strong></p>
+    </section>
+
+    
+
+    <script>
+       
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", () => {
+    if (navMenu.style.display === "block") {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "block";
+    }
+});
+    </script>
+</body>
+</html>
